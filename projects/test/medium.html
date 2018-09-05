@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interview | medium Mode</title>
+    <!-- Bootstrap link CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Fonts link font awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <!-- My custom CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Top navbar -->
+    <div class="fixed-top navbar-expand-lg navbar-dark bg-info bbtm text-center shadow">
+        <a class=" text-center text-light txt-shadow interview">Interview &raquo; </a>
+    </div>
+    <!-- //End of top navbar -->
+
+    <!-- main body -->
+    <div class="topContent shadow">
+        <div class="card-body mycolor mt-4">
+            <div class="card-title">
+                <h4 class="text-center text-warning">
+                    Read carefully to start the game
+                </h4>
+                <h5 class="modes text-center text-primary">medium
+                    Mode</h5>
+            </div>
+            <p class="simple text-light">
+                To play this game, you are required to type in the words correctly as they appear in the black box.
+                This words are case sensitive so you should be careful while typing. Currently you are working on a
+                medium
+                mode version of this game. To change mode, go to the left side panel and choose a different mode.<br><br>
+                NB :
+                Different modes have different time assigned to! <br> <br>GOOD LUCK
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid mt-4">
+        <br>
+        <div class="row sided">
+            <div class="col-md-3">
+                <h4 class="text-warning text-center">Choose Mode</h4>
+                <ul class="glit">
+                    <a href="index.html" id="easy">
+                        <li class="list-group-item">
+                            Easy Mode
+                        </li>
+                    </a>
+                    <a href="medium.html" id="medium">
+                        <li class="list-group-item">
+                            Medium Mode
+                        </li>
+                    </a>
+                    <a href="hard.html">
+                        <li class="list-group-item">
+                            Hard Mode
+                        </li>
+                    </a>
+                    <a href="master.html">
+                        <li class="list-group-item">
+                            Master Mode
+                        </li>
+                    </a>
+                </ul>
+                <br>
+                <hr>
+
+            </div>
+            <div class="col-md-9 mt-4">
+                <div class="card test-body">
+
+                    <div class="card-body">
+                        <div class="card-title text-center">
+                            <h5>Type the correct word within
+                                <span id="seconds" class="btn btn-warning"> -</span> seconds</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 quizpane shadow">
+                                <div class="text-center codes">
+                                    <code id="current-word" class="text-center">
+                                    </code>
+                                </div>
+
+
+
+                                <div class="quiz-field">
+                                    <input id="word-input" type="text" class="form-control form-control-lg mt-4"
+                                        placeholder="type in a, b or c ..." autofocus>
+                                </div>
+                                <div class="messages text-center">
+                                    <span id="message">checking...</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-2 quiztimerpane">
+                                <div class="card-body timerpane shadow">
+                                    <ul>
+                                        <li>
+                                            <i class="fa fa-clock-o"></i> TIME LEFT:
+                                            <span id="time" class="time-count btn btn-danger"> -
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check"></i> YOUR SCORE:
+                                            <span id="score" class="score-count btn btn-success mt-2">0</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <footer class="footer mt-4 text-center">
+                    <a href="" class="fa fa-twitter socials"></a>
+                    <a href="" class="fa fa-facebook socials"></a>
+
+                    <a href="" class="fa fa-instagram socials"></a>
+                    <a href="" class="fa fa-linkedin socials"></a>
+                    <a href="" class="fa fa-github socials"></a>
+                    <p class="text-muted py-2">
+                        <a class="text-light" href="http://nellylemmy.github.io">www.nelsonlemein.com</a>
+                        <br>
+                        <small>2018 &copy; All tights reserved</small>
+                    </p>
+                </footer>
+                <br>
+            </div>
+        </div>
+    </div>
+    <!-- //End of main body -->
+
+    <!-- Links to Javascript files -->
+
+    <!-- JQuery file -->
+    <script src="js/jquery-slim.min.js"></script>
+
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- My Main js file -->
+    <script src="js/medium.js"></script>
+</body>
+
+</html>

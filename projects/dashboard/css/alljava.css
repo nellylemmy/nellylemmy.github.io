@@ -1,0 +1,21 @@
+body{
+	background-color: darkgray;
+}
+.ruler{
+	background-color:maroon;
+	height:2px;
+}
+
+#error{
+	text-decoration: bold;
+	color: red;
+	visibility: hidden;
+}
+
+fieldset{
+    color:gray;
+}
+
+#lgnd{
+    color: antiquewhite;
+}

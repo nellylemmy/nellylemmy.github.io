@@ -1,0 +1,118 @@
+body {
+    background-color: #585858;
+}
+
+/*The navbar*/
+
+.navbar {
+    min-height: 33px !important;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+}
+
+.navbar-nav li a,
+.navbar-brand {
+    padding-top: 6px !important;
+    padding-bottom: 0 !important;
+    height: 33px !important;
+}
+
+#topnav {
+    background-color: rgb(2, 107, 110) !important;
+    color: #ffffff !important;
+}
+
+/*Costom color*/
+
+.main-color {
+    background-color: darkgreen !important;
+    color: #ffffff !important;
+    border-color: aliceblue !important;
+}
+
+.bg-light {
+    background-color: rgba(180, 176, 176, 0.527) !important;
+}
+
+.bg-home {
+    background-color: rgba(0, 0, 0, 0.377) !important;
+}
+
+.bg-darker {
+    background-color: #160120 !important;
+    color: #ffffff !important;
+}
+
+.table-dark {
+    background-color: rgba(10, 10, 10, 0.733) !important;
+    color: #ccc !important;
+}
+
+.bg-warning {
+    background-color: rgb(253, 175, 29) !important;
+}
+
+.post-color {
+    background-color: rgb(2, 107, 110) !important;
+    color: #ffffff !important;
+}
+
+.edit-color {
+    background-color: rgb(4, 2, 114) !important;
+    color: #ffffff !important;
+}
+
+.users-color {
+    background-color: rgb(88, 2, 7) !important;
+    color: #ffffff !important;
+}
+
+/*Header*/
+
+#header {
+    background-color: #333;
+    color: #fff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#header .create {
+    padding-top: 20px;
+}
+
+/*breadcrumb*/
+
+.breadcrumb {
+    background-color: #ccc;
+    color: #333;
+}
+
+.breadcrumb a {
+    color: #333333;
+}
+
+/*Progress bars*/
+
+.progress-bar {
+    background: green;
+    color: white;
+}
+
+.bar2 {
+    background: rgb(235, 3, 3) !important;
+    color: white;
+}
+
+.dash-box {
+    text-align: center;
+}
+
+/*Footer*/
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 35px;
+}

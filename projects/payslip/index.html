@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PaySlip</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="section-header text-center topFix my-red-color fixed-top bbtm">
+<section class="header-main bg-warning">
+<nav class="navbar navbar-light">
+	<div class="text-primary"><span id="headding" class="text-center text-light">PAYSLIP ( Demo v0.0.1 )</span> </div>
+	<span id="hed" class="text-light bg-dark text-center">Your New PaySlip</span>
+</nav>
+</section> <!-- header-main .// -->
+</header> <!-- section-header.// -->
+<br>
+	
+  <div id="firstBody"  class="container py-4">
+  <div id="message" class="card dorg py-2">
+  	<div class="card-body"><h4 class="text-dark text-center">The government of kenya has ascend the amount of tax being retrived from its employee.The action will officially start at the begining of January 2018.</h4><hr>
+	 <span class="small-text"><em><strong>Kindly, fill the form bellow to view your possibly salary as from next month. NOTE:The outcome would vary from different employee acording to different salary ratio</strong></em></span></div>	 
+  </div><br>
+
+  <div id="field" class="card">
+  	<div class="card-body bg-dark text-light">
+  	
+  <div class="form-row needs-validation" novalidate>
+    <div class="col-md-4 mb-3">
+      <label for="firstName">First name</label>
+      <input type="text" class="form-control" placeholder="enter your First name" id="firstName" required>
+      <div class="invalid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="lastName">Last name</label>
+      <input type="text" class="form-control" placeholder="enter your Last name" id="lastName" required>
+      <div class="invalid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="gender">Gender</label>      
+        <select name="Gender" id="gender" class="form-control">
+  				<option value="male">Male</option>
+  				<option value="female">Female</option>
+  				<option value="others">Others</option>
+  			</select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="ID">ID/Liscence</label>
+      <input class="form-control" type="number" placeholder="Enter your ID or Liscence number" id="identification" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="company">Company</label>
+      <input type="text" class="form-control" id="company" placeholder="Enter the name of company" required>
+      <div class="invalid-feedback">
+        Please provide a valid state.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="prfsnl">Professional</label>
+      <input type="text" class="form-control" id="profession" placeholder="state your Professional" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+  	<div class="col-md-3 mb-3">
+      <label for="salary" id="nSalary">Your salary</label>
+      <input type="number" class="form-control" id="salary" placeholder="Your Monthly salary" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+  </div>
+  <button id="btn" onclick="slip()" class="btn btn-primary" type="submit">Submit form</button>
+
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+  			
+  	
+  	</div>
+  	
+  </div>
+</div>
+
+	<div id="myTable" class="slip py-2"><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-6 col-lg-8">
+			<div id="topID" class="">
+				<h4 id="idField"></h4>	
+			</div>
+			</div>
+
+			<div class="col-6 col-lg-4">
+			<div class="">
+				<h5 id="clock"></h5>	
+			</div>
+			</div>
+
+		</div>
+
+		<div class="card-title">
+		<div id="content" class="py-2">
+		
+		<table id="tb">
+			<td>
+				<p>Dear <span id="recogName"></span>  we noticed that your salary of <span id="mySalary"></span> was been deducted to pay several services as follow: NSSF,NHIF and HEALTH. There is a government tax of <span id="percent"></span> which is <span id="gotoAmount"></span> deducted from your salary. NOTE that the tax is being charged as 10% for every employee in the country. It is clear that your remaining salary of <span id="remSalary"></span> should be given to you till the last coin. In case of any change or issue contact us at <a href="mailto:nelsonlemmy61@gmail.com">nelsonlemmy61@gmail.com</a></p>
+
+
+				<table id="intable">
+				<h4 id="grenhead" class="text-center py-2">Important details</h4>
+
+				<tr>
+					<td>Gender</td>
+					<td id="gender1" class="colful"></td>
+				</tr>
+				<tr>
+					<td>Company</td>
+					<td id="company1" class="colful"></td>
+				</tr>
+				<tr>
+					<td>Profession</td>
+					<td id="professional" class="colful"></td>
+				</tr>
+
+			</table>
+
+			<p><small>www.nellyweb.com &copy; 2016-2018 All rights reserved</small></p>
+
+			</td>
+
+			
+		</table>
+
+	</div>
+	</div>
+	<div id="sideTable">
+		<table class="table table-striped table-sm">
+				<tr id="sideTablehead">
+					<td><small>DETAILS</small></td>
+					<td><small>PERCENTAGE</small></td>
+					<td><small>AMOUNT</small></td>
+				</tr>
+
+				<tr>
+					<td id="leftSideTable">Salary after deductions</td>
+					<td id="percentageDeductions" class="prt">%</td>
+					<td id="salaryAfterdeductions" class="amnt"></td>
+				</tr>
+
+				<tr>
+					<td id="leftSideTable">Salary after tax</td>
+					<td id="percentageTax" class="prt">%</td>
+					<td id="salaryAfterTax" class="amnt"></td>
+				</tr>
+
+				<tr>
+					<td id="leftSideTable">Salary after deductions & tax</td>
+					<td id="percentageNet" class="prt">%</td>
+					<td id="deductionAndTax" class="amnt"></td>
+				</tr>
+
+				<tr>
+					<td id="leftSideTable">deductions in NSSF</td>
+					<td id="percentageNSSF" class="prt">%</td>
+					<td id="NSSF" class="amnt"></td>
+				</tr>
+
+				<tr>
+					<td id="leftSideTable">deductions in NHIF</td>
+					<td id="percentageNHIF" class="prt">%</td>
+					<td id="NHIF" class="amnt"></td>
+				</tr>
+
+				<tr>
+					<td id="leftSideTable">deductions in HEALTH</td>
+					<td id="percentageHEALTH" class="prt">%</td>
+					<td id="HEALTH" class="amnt"></td>
+				</tr>
+
+				<tr>
+					<td id="leftSideTable">GOVT TAX</td>
+					<td id="percentageGOVT" class="prt">%</td>
+					<td id="GOVT" class="amnt"></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+				<td></td>
+				<td id="totalPercentages" class="prt">%</td>
+				<td id="totalNet"></td>
+				</tr>
+
+		</table>
+	</div>
+
+	</div>
+
+	<div class="table-responsive container dn dt">
+<div class="card-body">
+	<table class="table table-sm" id="t1">
+              <thead>
+                <tr>
+			<th class="tbh"><small>FIRST NAME</small></th>
+			<th class="tbh"><small>LAST NAME</small></th>
+			<th class="tbh"><small>SALLARY</small></th>
+			<th class="tbh"><small>DEDUCTIONS</small></th>
+			<th class="tbh"><small>TAX</small></th>
+		</tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tbl" id="fName"></td>
+                  <td class="tbl" id="lName"></td>
+                  <td class="tbl" id="sSalary"></td>
+                  <td class="tbl" id="deductions"></td>
+                  <td class="tbl" id="tax"></td>
+                </tr>
+                <tr>
+                  <td>   </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td class="total" id="net"></td>
+                </tr>
+                
+              </tbody>
+            </table>
+</div>
+	
+</div>
+<footer>
+	<button class="btn-dark btn-block fixed-bottom" onclick="print()" id="print" style="cursor:pointer"><h2 class="wt"><i class="fa fa-print wt"></i> PRINT</h2></button>
+</footer>
+  </div>
+
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src = "js/main.js"></script>
+</body>
+</html>

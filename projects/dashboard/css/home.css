@@ -1,0 +1,172 @@
+body{
+  background-image: url("../images/back.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.bar1{
+background-color: maroon;
+}
+
+.abg a:hover{
+background-color: #000 !important;
+border-radius: 5px;
+}
+
+#nn{
+color: orange;
+font-weight: 900;
+}
+
+#ss{
+font-size: 25px;
+color: white;
+background-color:green;
+padding: 5px;
+}
+
+#tt{
+color:#A4F5F1;
+text-decoration:overline;
+padding-left: 5px;
+}
+
+#circleH{
+   color:darkgrey;
+    font-weight: 900;
+}
+
+#circleP{
+    color: white;
+}
+
+#buy-btn{
+background-color: #CB7F03 !important;
+}
+
+#hire-btn{
+background-color: silver !important;
+color: #530002 !important;
+}
+
+#agentsH{
+    color: bisque;
+}
+
+#mediaH{
+    color:pink;
+}
+
+#agentsP{
+    color: darkgray;
+}
+
+#con-tain{
+    background-color:#3c3c4d;
+    color: aliceblue;
+}
+
+.txtcolor{
+color: maroon !important;
+font-size: 18px;
+}
+
+.light-gray-pading1{
+padding-right: 5px;
+}
+
+#yrs-buy{
+width:100%;
+}
+
+.light_gray{
+background-color:#F6F6F6!important;
+padding-right: 2px;
+}
+
+.lightcolor{
+color: #f7f7f7;
+}
+
+.textcenter-underline{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.transparent-background{
+background-color: rgba(123,125,120,0.3)!important;
+color: white !important;
+}
+
+#con-tainH{
+    color:dimgray;
+}
+
+#con-tainP{
+    color: white;
+    font-weight: 200;
+}
+
+
+#form{
+    background-color:maroon;
+}
+
+.bbtn{
+background-color: #000000;
+}
+
+#labels{
+color:bisque;
+}
+
+#fomH{
+    color: wheat;
+    font-weight: 900;
+}
+
+#cross{
+    text-decoration: line-through;
+   
+}
+
+
+
+#foter{
+    background-color:maroon;
+    color: bisque;
+}
+
+#bd{
+color: white;
+}
+#pay{
+float: center;
+}
+#emp{
+    color: red;
+    font-size: 20px;
+}
+
+#buypageH{
+background-color: #CB7F03 !important;
+}
+#prog{
+width: 100%;
+margin-left: 15px;
+}
+
+.cardetails{
+margin: 10px;
+padding-left: 10px;
+line-height: 20px;
+}
+
+#foot1{
+background-color: darkgray;
+}
+
+
+

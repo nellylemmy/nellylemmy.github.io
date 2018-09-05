@@ -1,0 +1,182 @@
+	
+	
+	body{
+		
+		background-color: #333;
+	}
+		th,td,tr,button{
+			border:0.3px solid black;
+		}
+		#hed{
+			display: none;
+			padding: 10px;
+			border-radius: 5px;
+			font-size: 24px;
+		}
+		.slip{
+			display: none;
+			
+		}
+		#headding{
+			font-size: 28px;
+		}
+
+		#topID{
+			background-color: darkblue;
+			color: white;
+			border-radius: 5px;
+		}
+
+		.colful{
+			color:orange;
+		}
+
+		#intable{
+			margin:auto;
+		}
+
+		.wt{
+			color: #fff !important; 
+		}
+		.small-text{
+			font-size: 15px;
+			letter-spacing: 1.3px;
+			text-decoration: underline;
+			color: lightgray;
+		}
+
+		.dorg{
+			background-color: darkorange !important;
+		}
+
+		#idField{
+			padding: 10px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		.tbh{
+			color: darkgray;
+			background-color: maroon;
+			font-weight: bold;
+		}
+		.tbl{
+			background-color: white;
+			color: chocolate;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.total{
+			background-color: black;
+			color: lightgray;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		#grenhead{
+			color:lightgreen;
+		}
+
+		#content{
+			color: white;
+		}
+		#content p{
+			padding: 15px;
+			font-size: 18px;
+			text-align: center;
+		}
+
+		#tb{
+			background-color: #3f3f3f;
+		}
+
+
+		span{
+			color: navajowhite;
+		}
+
+		#sideTablehead{
+			color: darkgray;
+			background-color: darkblue;
+		}
+
+		.cont{
+			max-width: 300px;
+			margin-right:auto;
+			margin-left: auto;
+		}
+		#leftSideTable{
+			background-color: darkorange;
+			color: black;
+		}
+
+		.prt{
+			background-color: white;
+			color: red;
+		}
+
+		.amnt{
+			background-color: lightgreen;
+			color: #000;
+		}
+
+		#totalNet{
+			background-color: maroon;
+			color: red;
+		}
+
+		#clock{
+			
+			 
+			background-color: #3d3d3d;
+			color: lightgray;
+			padding: 10px;
+			border-radius: 5px;
+			font-weight: bold;
+			font-size: 16px;
+			border: 2px solid gray;
+		}
+
+		#firstBody{
+			margin-top: 2%;
+		}
+
+		#message{
+			text-align: center;
+			color: #fff;
+			
+		}
+
+		#contDiv{
+			float: left;
+			margin-left: 15%;
+			margin-top: 3%;
+		}
+
+		#btn{
+			float: right;
+			width: 120px;
+			padding: 10px;
+			border:1px solid white;
+			background-color: orange;
+			border-radius: 6px;
+			color: white;
+			font-weight: bold;
+			font-size: 15px;
+		}
+.dn{
+	margin-bottom: 20% !important;
+}
+
+.dt{
+	margin-top: 5% !important;
+}
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+	#hed{
+			font-size: 16px;
+		}
+	#headding{
+			font-size: 18px;
+		}
+}
