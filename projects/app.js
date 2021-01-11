@@ -89,8 +89,8 @@ window.onload = ()=>{
     .catch(err => {
         if (locationName.innerHTML != '') {
             loadField.classList.add("hide");
-            locationName.innerHTML = `${err["code"]}: ${err["message"]}`;
-            console.log(err)
+            locationName.innerHTML = `${errorObj.code} :  ${errorObj.message}`;
+            console.log(`${errorObj.code} :  ${errorObj.message}`)
         }
     })
   }
@@ -151,7 +151,8 @@ inputSubmit.addEventListener('click', (e)=>{
     .catch(err => {
             if (response = 404) {
                 loadField2.classList.add("hide");
-            locationName2.innerHTML = `${err = 404}: city not found`
+            locationName.innerHTML = `${errorObj.code} :  ${errorObj.message}`;
+            console.log(`${errorObj.code} :  ${errorObj.message}`)
             temp2.innerHTML = 'The city that you are trying to search does not match our list. Please check your spellings and try again'
             clouds2.innerHTML = ''
             humid2.innerHTML = ''
