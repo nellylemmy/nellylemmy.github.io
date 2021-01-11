@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-adds">
+            adds left
+        </div>
+        <div class="weather-body">
+            <!-- <div class="top-add">
+                some add
+            </div> -->
+
+            <div class="data-field">
+                <h3>Your current location</h3>
+                <div class="load-field">
+                    <div class="spinner"></div>
+                    <p>Getting Your Location...</p>
+                </div>
+                <h2 class="name"></h2>
+                <p class="dt"></p>
+                <p class="temp"></p>
+                <p class="mainly"></p>
+                <p class="clouds"></p>
+                <p class="humid"></p>
+                <p class="pressure"></p>
+                <p class="visibility"></p> 
+                <p class="icon"></p>
+                <p class="wind-deg"></p>
+                <p class="wind-speed"></p>
+                <p class="description"></p>
+            </div>
+            
+
+            <div class="input-field">
+                <h3>Search weather for other locations</h3>
+                <form onsubmit="event.preventDefault();" class="search-form">
+                    <label for="search" class="screen-reader-text">Search</label>
+                    <input id="search" type="search" class="search-input input-value" placeholder="Search City, Country, Region">
+                    <input type="submit" class="input-submit search-button" value="submit">
+                  </form>
+            
+                <div class="data-field">
+                    <div class="load-field2">
+                        <div class="spinner2"></div>
+                        <p>Fetching Data...</p>
+                    </div>
+                    <h2 class="name2"></h2>
+                    <p class="dt2"></p>
+                    <p class="temp2"></p>
+                    <p class="mainly2"></p>
+                    <p class="clouds2"></p>
+                    <p class="humid2"></p>
+                    <p class="pressure2"></p>
+                    <p class="visibility2"></p> 
+                    <p class="icon2"></p>
+                    <p class="wind-deg2"></p>
+                    <p class="wind-speed2"></p>
+                    <p class="description2"></p>
+                </div>
+          </div>
+
+        </div>
+
+        <div class="right-adds">
+            adds right
+        </div>
+    </div>
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>
