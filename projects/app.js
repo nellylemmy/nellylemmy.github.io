@@ -1,68 +1,45 @@
+// user weather data
 const inputValue = document.querySelector(".input-value");
 const inputSubmit = document.querySelector(".input-submit");
 const locationName = document.querySelector(".name");
-
 const dt = document.querySelector(".dt");
 const temp = document.querySelector(".temp");
 const clouds = document.querySelector(".clouds");
 const humid = document.querySelector(".humid");
 const pressure = document.querySelector(".pressure");
 const visibility = document.querySelector(".visibility");
-// const icon = document.querySelector(".icon");
 const windDeg = document.querySelector(".wind-deg");
 const windSpeed = document.querySelector(".wind-speed");
 const description = document.querySelector(".description");
 const loadField = document.querySelector(".load-field")
 const mainly = document.querySelector(".mainly")
 
-
-
+// user searched weather data
 const locationName2 = document.querySelector(".name2");
-
 const dt2 = document.querySelector(".dt2");
 const temp2 = document.querySelector(".temp2");
 const clouds2 = document.querySelector(".clouds2");
 const humid2 = document.querySelector(".humid2");
 const pressure2 = document.querySelector(".pressure2");
 const visibility2 = document.querySelector(".visibility2");
-// const icon = document.querySelector(".icon");
 const windDeg2 = document.querySelector(".wind-deg2");
 const windSpeed2 = document.querySelector(".wind-speed2");
 const description2 = document.querySelector(".description2");
 const loadField2 = document.querySelector(".load-field2")
 const mainly2 = document.querySelector(".mainly2")
 
-
+// API Key
 let key = '4618da6a02bc93f0e22aacf2f86c9b06';
 
+// When window loads
 window.onload = ()=>{
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition);
-        } else { 
-            loadField.innerHTML = "Geolocation is not supported by this browser.";
-        }
 
+    // handling if there is an error
+        let errorHandler = function (errorObj) { 
+            loadField.innerHTML = `${errorObj.code} : ${errorObj.message}` 
+        }; 
 
-
-        var successHandler = function(position) { 
-            alert(position.coords.latitude); 
-            alert(position.coords.longitude); 
-            }; 
-            
-            var errorHandler = function (errorObj) { 
-            alert(errorObj.code + ": " + errorObj.message); 
-            
-            alert("something wrong take this lat " + 26.0546106); 
-            alert("something wrong take this lng " +-98.3939791); 
-            
-            }; 
-            
-            navigator.geolocation.getCurrentPosition( 
-            successHandler, errorHandler, 
-            {enableHighAccuracy: true, maximumAge: 10000});
-
-
-
+    //   Main function
       function showPosition(position) {
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&exclude=${"alerts"}&appid=${key}`)
         .then(response => response.json())
@@ -89,14 +66,19 @@ window.onload = ()=>{
     .catch(err => {
         if (locationName.innerHTML != '') {
             loadField.classList.add("hide");
-            locationName.innerHTML = `${errorObj.code} :  ${errorObj.message}`;
-            console.log(`${errorObj.code} :  ${errorObj.message}`)
+            locationName.innerHTML = `${err["code"]}: ${err["message"]}`;
+            console.log(err)
         }
     })
   }
 
-//   loadField2.classList.add("hide");
+    //   call navigator
+    navigator.geolocation.getCurrentPosition( 
+        showPosition, errorHandler, 
+        {enableHighAccuracy: true, maximumAge: 10000}
+    );
 
+    // Hide data if spinner is on
 if (locationName2.innerHTML == '') {
     loadField2.classList.add("hide");
 } else if (locationName2.innerHTML != '') {
@@ -107,7 +89,7 @@ if (locationName2.innerHTML == '') {
 }
 
 
-
+// User Enter data
 inputSubmit.addEventListener('click', (e)=>{
     e.preventDefault();
 
@@ -151,8 +133,7 @@ inputSubmit.addEventListener('click', (e)=>{
     .catch(err => {
             if (response = 404) {
                 loadField2.classList.add("hide");
-            locationName.innerHTML = `${errorObj.code} :  ${errorObj.message}`;
-            console.log(`${errorObj.code} :  ${errorObj.message}`)
+            locationName2.innerHTML = `${err = 404}: city not found`
             temp2.innerHTML = 'The city that you are trying to search does not match our list. Please check your spellings and try again'
             clouds2.innerHTML = ''
             humid2.innerHTML = ''
