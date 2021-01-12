@@ -245,6 +245,7 @@ input[type = 'submit']:focus{
     .data-field{
         background-color: #fff;
         padding: 2% 5%;
+        margin-bottom: 2%;
         border-radius: 6px;
     }
     
