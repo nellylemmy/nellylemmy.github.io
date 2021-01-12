@@ -13,6 +13,8 @@ const windSpeed = document.querySelector(".wind-speed");
 const description = document.querySelector(".description");
 const loadField = document.querySelector(".load-field")
 const mainly = document.querySelector(".mainly")
+const lat = document.querySelector(".lat")
+const long = document.querySelector(".long")
 
 // user searched weather data
 const locationName2 = document.querySelector(".name2");
@@ -45,7 +47,7 @@ window.onload = ()=>{
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            locationName.innerHTML = `Location: ${data["timezone"]}`;
+            locationName.innerHTML = `Time Zone: ${data["timezone"]}`;
             temp.innerHTML = `Feels Like: ${data["current"]["temp"]}`;
             clouds.innerHTML = `Cloud: ${data["current"]["clouds"]}`;
             humid.innerHTML = `Humidity: ${data["current"]["humidity"]}`;
@@ -56,6 +58,8 @@ window.onload = ()=>{
             windSpeed.innerHTML = `wind speed: ${data["current"]["wind_speed"]}`
             description.innerHTML = `Description: ${data["current"]["weather"][0]["description"]}`;
             mainly.innerHTML = `Mostly: ${data["current"]["weather"][0]["main"]}`;
+            lat.innerHTML = `Latitude: ${data["lat"]}`;
+            long.innerHTML = `Longitude: ${data["lon"]}`;
 
             if (locationName.innerHTML != '') {
                 loadField.classList.add("hide");
