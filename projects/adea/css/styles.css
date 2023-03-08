@@ -282,12 +282,12 @@ figcaption{
 }
 
 .big-different{
-  background: url("../media/images/spiritual.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  padding: .41rem;
-  text-align: center;
-  margin-top: 0.81rem;
+  margin-top: 0.41rem;
+}
+
+.big-different img{
+  width: 100%;
+  height: 17rem;
 }
 
 .bold-content:not(.big-different){

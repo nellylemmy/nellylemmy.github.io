@@ -29,7 +29,9 @@ function parseText(text, limit){
 let firstContentToLinkPage8Div = document.getElementById('link-to-page-8');
 let firstContentToLinkPage8Content = `
 <label for="page-8">
-<div class="big-d-head">spiritual note</div>
+<div class="big-d-head">
+<img src='./media/images/spiritual.jpg'>
+</div>
 </div>
 </label>
 `;
