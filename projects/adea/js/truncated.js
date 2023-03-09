@@ -1,3 +1,10 @@
+window.addEventListener('load', ()=>{
+   let loader = document.querySelector('.loading');
+   loader.classList.add('lost')
+})
+
+
+
 // Function to count all characters in a given div
 function wordCount(words) {
   var count = 0
@@ -432,20 +439,11 @@ console.log(`link to page 6 part has ${linkToPage6Chars} characters (FIRST CONTE
 
 
 class MoreLinks {
-  constructor(link, url) {
+  constructor(link, id) {
     this.link = link;
-    this.url = url;
+    this.id = id;
   }
 }
-
-const firstLink = new MoreLinks(`ADEA proposes first annual English Language Camp to provide a “vacation with a
-purpose” for the week of August 20, 2023`, `https://example.com`);
-const secondLink = new MoreLinks(`So they graduate from high school, and then what?`, `https://example.com`);
-const thirdLink = new MoreLinks(`ADEA Director travels to Kenya to strategize 2023+ with PMD team`, `https://example.com`);
-const fourthLink = new MoreLinks(`FIX IT Uniform Strengthening and Repair Workshops schedule for June 2023.`, `https://example.com`);
-const fifthLink = new MoreLinks(`Artifacts: PMD collects artifacts and their related stories as families are relocated and
-traditional culture is abandoned.`, `https://example.com`);
-const sixthLink = new MoreLinks(`ADEA/PMD considers “union” to protect the locally hired teacher.`, `https://example.com`);
 
 let myLink = document.createElement('a');
 let myLink2 = document.createElement('a');
@@ -454,22 +452,38 @@ let myLink4 = document.createElement('a');
 let myLink5 = document.createElement('a');
 let myLink6 = document.createElement('a');
 
-myLink.href = firstLink.url;
+let id1 = 'link1';
+let id2 = 'link2';
+let id3 = 'link3';
+let id4 = 'link4';
+let id5 = 'link5';
+let id6 = 'link6';
+
+const firstLink = new MoreLinks(`ADEA proposes first annual English Language Camp to provide a “vacation with a
+purpose” for the week of August 20, 2023`, `${id1}`);
+const secondLink = new MoreLinks(`So they graduate from high school, and then what?`, `${id2}`);
+const thirdLink = new MoreLinks(`ADEA Director travels to Kenya to strategize 2023+ with PMD team`, `${id3}`);
+const fourthLink = new MoreLinks(`FIX IT Uniform Strengthening and Repair Workshops schedule for June 2023.`, `${id4}`);
+const fifthLink = new MoreLinks(`Artifacts: PMD collects artifacts and their related stories as families are relocated and
+traditional culture is abandoned.`, `${id5}`);
+const sixthLink = new MoreLinks(`ADEA/PMD considers “union” to protect the locally hired teacher.`, `${id6}`);
+
+myLink.id = firstLink.id;
 myLink.innerText = firstLink.link;
 
-myLink2.href = secondLink.url;
+myLink2.id = secondLink.id;
 myLink2.innerText = secondLink.link;
 
-myLink3.href = thirdLink.url;
+myLink3.id = thirdLink.id;
 myLink3.innerText = thirdLink.link;
 
-myLink4.href = fourthLink.url;
+myLink4.id = fourthLink.id;
 myLink4.innerText = fourthLink.link;
 
-myLink5.href = fifthLink.url;
+myLink5.id = fifthLink.id;
 myLink5.innerText = fifthLink.link;
 
-myLink6.href = sixthLink.url;
+myLink6.id = sixthLink.id;
 myLink6.innerText = sixthLink.link;
 
 document.getElementById("demo").appendChild(myLink2)
@@ -480,11 +494,270 @@ document.getElementById("demo").appendChild(myLink5)
 document.getElementById("demo").appendChild(myLink6)
 
 
-
-window.addEventListener('load', ()=>{
-   let loader = document.querySelector('.loading');
-   loader.classList.add('lost')
+document.getElementById(id1).addEventListener('click', ()=>{
+   console.log(`${id1} clicked`)
+   showLink_1();
 })
+document.getElementById(id2).addEventListener('click', ()=>{
+   console.log(`${id2} clicked`)
+   showLink_2();
+})
+document.getElementById(id3).addEventListener('click', ()=>{
+   console.log(`${id3} clicked`)
+   showLink_3();
+})
+document.getElementById(id4).addEventListener('click', ()=>{
+   console.log(`${id4} clicked`)
+   showLink_4();
+})
+document.getElementById(id5).addEventListener('click', ()=>{
+   console.log(`${id5} clicked`)
+   showLink_5();
+})
+document.getElementById(id6).addEventListener('click', ()=>{
+   console.log(`${id6} clicked`)
+   showLink_6();
+})
+
+
+
+let mainBody = document.createElement('div');
+
+function showLink_1(){      
+ document.getElementById("recommended_link_1").style.display="block";
+mainBody.innerHTML = link1;
+document.getElementById("recommended_link_1_body").append(mainBody);
+}  
+
+function showLink_2(){      
+ document.getElementById("recommended_link_2").style.display="block";  
+mainBody.innerHTML = link2;
+document.getElementById("recommended_link_2_body").append(mainBody);    
+}   
+
+function showLink_3(){      
+ document.getElementById("recommended_link_3").style.display="block";  
+mainBody.innerHTML = link3;
+document.getElementById("recommended_link_3_body").append(mainBody);    
+}  
+
+function showLink_4(){      
+ document.getElementById("recommended_link_4").style.display="block";  
+mainBody.innerHTML = link4;
+document.getElementById("recommended_link_4_body").append(mainBody);    
+}  
+
+function showLink_5(){      
+ document.getElementById("recommended_link_5").style.display="block";    
+mainBody.innerHTML = link5;
+document.getElementById("recommended_link_5_body").append(mainBody);  
+}  
+
+function showLink_6(){      
+ document.getElementById("recommended_link_6").style.display="block";  
+mainBody.innerHTML = link6;
+document.getElementById("recommended_link_6_body").append(mainBody);    
+}      
+
+
+
+
+function hidePopup(){      
+ document.getElementById("recommended_link_1").style.display="none";
+document.getElementById("recommended_link_1_body").prepend(mainBody)
+
+ document.getElementById("recommended_link_2").style.display="none"; 
+document.getElementById("recommended_link_2_body").prepend(mainBody)
+
+ document.getElementById("recommended_link_3").style.display="none";
+document.getElementById("recommended_link_3_body").prepend(mainBody)
+
+ document.getElementById("recommended_link_4").style.display="none"; 
+document.getElementById("recommended_link_4_body").prepend(mainBody)
+
+ document.getElementById("recommended_link_5").style.display="none"; 
+document.getElementById("recommended_link_5_body").prepend(mainBody)
+
+ document.getElementById("recommended_link_6").style.display="none"; 
+document.getElementById("recommended_link_6_body").prepend(mainBody)     
+}
+
+
+const link1 = `
+<div class="bold-content-header links-header"><div>ADEA proposes first annual English Language Camp to provide a “vacation with a
+purpose” for the week of August 20, 2023</div></div>
+<div class="links-content">
+
+</div>
+`
+
+
+
+
+
+
+
+
+
+
+const link2 = `<div class="bold-content-header links-header"><div>So they graduate from high school, and then what?</div></div>
+<div class="links-content">
+<p>
+As we seek support to help children remain in secondary school and earn their graduation
+diplomas, I have been asked on a few occasions, “Then what?” This is a legitimate question,
+one that I have asked myself. In truth, at this point, all I know is that the sense of completion
+and having a school diploma means a great deal to children and parents who have never
+attended school. Secondly, a Kenyan cannot apply for any sort of government job without a
+high-school diploma. This certificate will remove one limitation from the many they will face.
+We are considering adding a post-secondary school year for Computer, English, and Tailoring Training.
+</p>
+<p>
+A Computer Center: I recently had a conversation with a Kenyan professional who came from a
+poor background and explained that the high level of computer skills learned in secondary
+school allowed him to find a job when he failed to find the money to remain in university. The
+need for computer fluency will continue to expand throughout the world. In light of this, we are
+exploring adding a post-secondary school year of studies focused on computer skills,
+programming, typing, and related IT studies. As Africa has a smaller computer-skilled
+workforce, there is a place for skills.
+</p>
+<p>
+English Language Training: Growing up in an isolated corner of Kenya located on the border
+with Tanzania, young men and women from the area find themselves fluent in no language:
+neither English, Swahili, nor their native language Maa. With English as a national and global
+language, fluency in it will open doors for these graduates. It will give them access to better
+jobs (especially in the hospitality industry) and literature, and online learning opportunities.
+Tailoring and Sewing:
+For students with interest in sewing, tailoring, and fashion - we are considering a year of
+sewing and tailoring along with English studies. The idea is to expose them to the highest level
+of sewing and tailoring to give them an advantage in the sewing market. The first project will
+be designing and fabricating a more durable school uniform.
+</p>
+</div>`
+
+const link3 = `<div class="bold-content-header links-header"><div>ADEA Director travels to Kenya to strategize 2023+ with PMD team</div></div>
+<div class="links-content">
+<p>
+Douglas McFalls, the ADEA Foundation director who has been working with the Maasai
+community in Rombo, Kenya for twenty years, recently returned to the USA after an intensive
+week spent in Rombo with the Pillar of Maasai (PMD) team. The focus of the visit was to be
+sure the PMD office was in order, and to prepare for the KKIS child sponsorship program that
+ADEA intends to launch before the end of 2023.
+</p>
+<p>
+During the intensive week of work, he was encouraged by the educational improvement
+experienced by the KKIS students we already support (the top three students in last years
+gradution class at Colin Davies Secondary School were KKIS students. Teachers have reported
+that KKIS students who are required to attend the English Language Club
+</p>
+</div>`;
+
+
+const link4 = `
+<div class="bold-content-header links-header"><div>FIX IT Uniform Strengthening and Repair Workshops schedule for June 2023.</div></div>
+<div class="links-content">
+<p>
+The Maasai traditionally do not wear sewn clothes, but pieces of fabric (called shukas) sewing
+or repairing clothes is not familiar to them. That, paired with the fact that School uniforms are
+quickly made with the cheapest fabrics, results in students wearing damaged uniforms, and
+damaged clothes result in costs for repair and replacement and shaming.
+</p>
+<p>
+To address this issue, ADEA/PMD is launching a series of FIX IT workshops to help families
+better care for and upkeep school uniforms. The workshops will be given to the KKIS students
+and their caregivers/parents at different times. The children will meet after school, while the
+parents will meet on weekends. The workshops will focus on three areas: Reinforcing:
+identifying the most common places of damage (underarms, crotch, front pockets, and buttons)
+and reinforcing them before they are ever worn. Repair: what stitches and other techniques
+can best repair damaged uniforms, and Maintenance: the “stitch in time saves nine” approach.
+</p>
+<p>
+Malei Wytcliff will teach the course. He is a local from Rombo currently studying fashion at
+Kirinyaga University outside of Nairobi and partially supported by the ADEA Foundation. He will
+attend our Mid-term KKIS student workshop to introduce the program and identify students
+interested in sewing and tailoring. For the students, he will give three two-day workshops at
+Colin Davies Secondary school, where most of our students attend. Students interested in
+sewing as a professional pursuit will attend the first workshops. Malei will present the program
+to them – after which they will evaluate his approach, make improvements, and prepare
+samples and material for the larger student and parent classes. Each attendee will receive
+thread, needles, and a small pair of scissors.
+</p>
+</div>
+
+
+`
+const link5 = `<div class="bold-content-header links-header"><div>Artifacts: PMD collects artifacts and their related stories as families are relocated and traditional culture is abandoned.</div></div>
+<div class="links-content">
+
+</div>`;
+
+
+const link6 = `<div class="bold-content-header links-header"><div>ADEA/PMD considers “union” to protect the locally hired teacher.</div></div>
+<div class="links-content">
+<p>
+Because the government of Kenya cannot currently afford to hire sufficient staff for all the
+national schools, especially those in rural communities, the local community hires most
+teachers in Rombo. Though many are fully certified teachers, they are paid five to nine times
+less than the government teachers because they are paid for through school fees from the
+impoverished local community.
+</p>
+
+<p>
+Most government-assigned teachers and head teachers assigned to Rombo (and all rural areas
+of Kenya) are not native to the regions. Their urban “more civilized” upbringings and large
+salaries result in arrogance toward the local staff and disdain for the local rural setting and
+humble school grounds (which are indeed challenging). Frequently, these attitudes result in
+attitudes of superiority and shaming toward the local staff. Local staff, who are technically only
+hired to teach, are commonly given tasks and extra responsibilities that are technically the
+duties of the official government teachers. Local teachers have no official contracts to clarify
+the boundaries of their duties, they have no medical insurance, their low wages (which is
+currently – though not officially – handled by the head teacher) are often given late and
+sporadically, and they often suffer verbal and emotional abuses from government employed
+staff (even though their students generally perform better than those instructed by
+government teachers). When hearing the challenges of the local teachers, it seems that a local
+“union” for these teachers would protect and encourage them and give them the respect they
+deserve.</p>
+</div>`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

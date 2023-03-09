@@ -9,6 +9,12 @@ Extra extra large 	xxl 	≥1400px // XX-Large devices (larger desktops, 1400px a
 
  */
 
+ /* 
+ 
+ Body text - Font sizes should be around 16px to 18px for legibility (or 1.6rem to 1.8rem using our sizing rules mentioned above). If you can afford to go a bit larger, then even 21px can be pleasant to read. Headings - The headings should be around 1.96 times larger than your body text to create a sufficient contrast.
+ 
+  */
+
 
 /* ================================================================= */
 /* larger desktops, 1400px and up */
@@ -192,6 +198,10 @@ Extra extra large 	xxl 	≥1400px // XX-Large devices (larger desktops, 1400px a
 /* ================================================================= */
 /* landscape phones, 576px and up */
   @media only screen and (max-width:576px){
+    body{
+      line-height: 150%;
+      font-family: sans-serif;
+    }
     .page-content, dialog {
       /* display: none; */
       width: auto;
@@ -340,5 +350,31 @@ Extra extra large 	xxl 	≥1400px // XX-Large devices (larger desktops, 1400px a
     width: 100%;
     height: auto;
     }
+
+
+#recommended_link_1, #recommended_link_2, #recommended_link_3, #recommended_link_4, #recommended_link_5, #recommended_link_6 {
+        width: auto;
+    border: none;
+}
+
+#recommended_link_1_body, #recommended_link_2_body, #recommended_link_3_body, #recommended_link_4_body, #recommended_link_5_body, #recommended_link_6_body {
+    -webkit-animation: appear 350ms ease-in 1;
+    animation: appear 350ms ease-in 1;
+    -webkit-animation: appear 350ms ease-in 1;
+    animation: appear 350ms ease-in 1;
+    z-index: 10;
+    width: auto !important;
+    border: 3px solid #5c6435;
+    height: 100%;
+    top: 0;
+    background-color: #f0f8ff;
+    padding: 0;
+    padding-top: 0;
+    margin-bottom: 6rem;
+    overflow-y: auto;
+
+  
+}
+
  }
  /* ================================================================= */
