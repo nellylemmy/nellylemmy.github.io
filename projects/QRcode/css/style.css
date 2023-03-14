@@ -1,0 +1,82 @@
+/* 
+
+- Mobile: 375px
+- Desktop: 1440px
+
+- Font size (paragraph): 15px
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+
+- White: hsl(0, 0%, 100%)
+- Light gray: hsl(212, 45%, 89%)
+- Grayish blue: hsl(220, 15%, 55%)
+- Dark blue: hsl(218, 44%, 22%)
+
+- Weights: 400, 700
+
+ */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body{
+  font-family: 'Outfit', sans-serif;
+}
+
+body{
+  background:hsl(220, 15%, 55%)
+}
+
+.container{
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 12px;
+  width: 290px;
+  margin: 15rem auto;
+}
+
+.qr-code{
+  padding: 1rem;
+  box-shadow: 0 1px 15px hsl(218, 44%, 22%);
+  border-radius: 12px;
+}
+
+.qr-image img{
+  width: 100%;
+  border-radius: 12px;
+}
+
+.qr-title{
+  color: hsl(218, 44%, 22%);
+  font-weight: 700;
+  font-size: 19px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.qr-content{
+  color: hsl(220, 15%, 55%);
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+
+/* ==== MEDIA QUERIES ==== */
+
+@media screen and (max-width:1440px){
+  .container{
+    width: 280px;
+    margin: 15rem auto;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .container{
+    margin: 8rem auto !important;
+  }
+}
