@@ -1079,8 +1079,6 @@ text-align: center;
   line-height: 1.75rem;
 }
 
-
-
 .card {
   grid-column: 7 / 10;
   font-size: .85rem;
@@ -1094,7 +1092,6 @@ text-align: center;
   border-bottom: 2px solid #4C522E;
   border-left: 2px solid #4C522E;
 }
-
 
 .card span {
   position: absolute;
