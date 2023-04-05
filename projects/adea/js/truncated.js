@@ -37,7 +37,7 @@ let firstContentToLinkPage8Div = document.getElementById('link-to-page-8');
 let firstContentToLinkPage8Content = `
 <label for="page-8">
 <div class="big-d-head">
-<img src='./media/images/spiritual.jpg'>
+<img src='./media/images/bibleversebg.svg'>
 </div>
 </div>
 </label>
@@ -214,7 +214,7 @@ const readMoreOnPage1Label = document.createElement('label');
 readMoreOnPage1.className = 'read-more';
 readMoreOnPage1.id = 'pages-page-1';
 readMoreOnPage1Label.setAttribute('for','page-1');
-readMoreOnPage1Label.textContent = 'read more on page 1';
+readMoreOnPage1Label.textContent = 'read more on page 3';
 
 readMoreOnPage1.appendChild(readMoreOnPage1Label);
 
@@ -225,7 +225,7 @@ let linkToPage1Chars = wordCount(document.getElementsByClassName('text-content')
 let linkToPage1MaxCount = 0;
 
 if(linkToPage1Chars > linkToPage1MaxCount){
-mainContentDiv.innerHTML = parseText(mainContentContent, 1050);
+mainContentDiv.innerHTML = parseText(mainContentContent, 425);
 mainContentDiv.appendChild(readMoreOnPage1);
 console.log(`link to page 1 part has ${linkToPage1Chars} characters (FIRST CONTENT ON LEFT TOP )`)
 }
@@ -335,7 +335,7 @@ let linkToPage2Chars = wordCount(document.getElementsByClassName('link-to-page-2
 let linkToPage2MaxCount = 0;
 
 if(linkToPage2Chars > linkToPage2MaxCount){
-linkToPage2MainContentDiv.innerHTML = parseText(linkToPage2MainContentContent, 330);
+linkToPage2MainContentDiv.innerHTML = parseText(linkToPage2MainContentContent, 155);
 linkToPage2MainContentDiv.appendChild(readMoreOnPage2);
 console.log(`link to page 1 part has ${linkToPage2Chars} characters (FIRST CONTENT ON LEFT TOP )`)
 }
@@ -421,7 +421,7 @@ let linkToPage6Chars = wordCount(document.getElementsByClassName('link-to-page-6
 let linkToPage6MaxCount = 0;
 
 if(linkToPage6Chars > linkToPage6MaxCount){
-linkToPage6MainContentDiv.innerHTML = parseText(linkToPage6MainContentContent, 380);
+linkToPage6MainContentDiv.innerHTML = parseText(linkToPage6MainContentContent, 70);
 linkToPage6MainContentDiv.appendChild(readMoreOnPage6);
 console.log(`link to page 6 part has ${linkToPage6Chars} characters (FIRST CONTENT ON LEFT TOP )`)
 }
